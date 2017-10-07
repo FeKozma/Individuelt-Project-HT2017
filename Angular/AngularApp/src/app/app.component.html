@@ -2,8 +2,49 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
- <agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-map   [latitude]="lat" [longitude]="lng">
+  <!-- <agm-marker [markerDraggable]=(true)   [latitude]="lat" [longitude]="lng" ></agm-marker> -->
+  <agm-circle [latitude]="lat" [longitude]="lng" [radius]=300 [editable]=(true)></agm-circle>
 
- </agm-map>
-<!-- <add-ad></add-ad> -->
+
+
+</agm-map>
+
+<app-forum></app-forum>
+<!--
+ <div class="container">
+     <h1>Form</h1>
+     <form>
+       <div class="form-group">
+         <label>Titel</label>
+         <input type="text" class="form-control" id="title" required maxlength="30">
+        <!-- <div *ngIf="title.errors && (title.dirty || title.touched)" class="alter alter-danger">
+         </div>
+
+         <div [hidden]="!title.errors.required">
+           titel måste finnas
+         </div>
+
+         <div [hidden]="!title.errors.maxlength">
+           titel måste vara kortare än 30 karaktärer
+         </div> --> <!--
+
+
+       </div>
+       <div class="form-group">
+         <label>Author</label>
+         <input type="text" class="form-control" id="author" required maxlength="30">
+       </div>
+       <div class="form-group">
+         <label >url</label>
+         <input type="text" class="form-control" pattern="https?://+" id="url" maxlength="50" >
+       </div>
+       <button type="submit" class="btn btn-default"> Submit</button>
+     </form>
+     <hr />
+     <div>
+       <h2>Model:</h2>
+       {{currentBook}}
+     </div>
+   </div>
+-->

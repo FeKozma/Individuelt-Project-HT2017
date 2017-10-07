@@ -1,0 +1,36 @@
+<p> text </p>
+<!-- <div class="container">
+    <h1>Form</h1>
+    <form>
+      <div class="form-group">
+        <lable for="title">Titel</lable>
+        <input type="text" class="form-control" id="title" required maxlength="30" [(ngModel)]="model.title" name="title" #title="ngModel">
+        <div *ngIf="title.errors && (title.dirty || title.touched)" class="alter alter-danger">
+        </div>
+
+        <divb [hidden]="!title.errors.required">
+          titel måste finnas
+        </div>
+
+        <div [hidden]="!title.errors.maxlength">
+          titel måste vara kortare än 30 karaktärer
+        </div>
+
+
+      </div>
+      <div class="form-group">
+        <lable for="author">Author</lable>
+        <input type="text" class="form-control" id="author" required maxlength="30" [(ngModel)]="model.author" name="author" #author="ngModel">
+      </div>
+      <div class="form-group">
+        <lable for="url">url</lable>
+        <input type="text" class="form-control" pattern="https?://+" id="url" maxlength="50" [(ngModel)]="model.url" name="url" #url="ngModel">
+      </div>
+      <button type="submit" class "btn btn-default"> Submit</button>
+    </form>
+    <hr />
+    <div>
+      <h2>Model:</h2>
+      {{currentBook}}
+    </div>
+  </div>

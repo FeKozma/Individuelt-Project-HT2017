@@ -3,6 +3,9 @@ import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 /** import { AddAdComponent } from './add-ad/addAdImport'*/
 
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 
 
 @Component({
@@ -15,17 +18,23 @@ export class AppComponent {
   title: string = 'Google maps';
   lat: number = 56.16156;
   lng: number = 15.58661;
+  private apiUrl = 'http://localhost:8080/hello';
+  data: any = {};
 
-}
+  constructor(private http: Http) {
+    console.log('contacting api');
+    this.getContacts();
+    this.getData();
+  }
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
+  getData() {
+    return this.http.get(this.apiUrl).map((res: Response) => res.json())
+  }
+
+  getContacts() {
+    this.getData().subscribe(data => {
+        console.log(data);
+        this.data = data;
     })
-  ],
-  declarations: [ AppComponent ],
-  bootstrap: [ AppComponent ]
-})
-export class AppModule {}
+  }
+}

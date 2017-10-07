@@ -1,0 +1,38 @@
+
+
+
+<div class="container">
+    <h1>Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="title">Företag</label>
+        <input type="text" class="form-control" id="title" required maxlength="30" [(ngModel)]="model.title" name="title" #title="ngModel">
+        <div *ngIf="title.errors && (title.dirty || title.touched)" class="alterTitle alter-danger">
+          <div [hidden]="!title.errors.required">
+            <p>titel måste finnas</p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="form-group">
+        <label for="summary">Sammanfattning</label>
+        <input type="text" class="form-control" id="summary" required maxlength="30" [(ngModel)]="model.summary" name="summary" #summary="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="url">url</label>
+        <input type="text" class="form-control" id="url" pattern="https?://+" id="url" maxlength="90" [(ngModel)]="model.url" name="url" #url="ngModel">
+        <!-- <div *ngIf="url.errors && (url.dirty || url.touched) && (url.legth < 9)" class="alterUrl alter-danger">
+          <div [hidden]="!url.errors.required">
+            <p>url måste finnas</p>
+          </div>
+        </div> -->
+      </div>
+      <button type="submit" class="btn btn-default"> Submit</button>
+    </form>
+    <hr />
+    <div>
+      <h2>Model:</h2>
+      {{ currentData }}
+    </div>
+  </div>

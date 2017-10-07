@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { ForumComponent } from './forum/forum.component';
 /** import { AddAdComponent } from './add-ad/addAdImport'; */
+
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     CommonModule,
     FormsModule,
     AgmCoreModule.forRoot({
@@ -17,7 +21,7 @@ import { AgmCoreModule } from '@agm/core';
     })
   ],
   providers: [],
-  declarations: [ AppComponent/**, AddAdComponent*/ ],
+  declarations: [ AppComponent, ForumComponent/**, AddAdComponent*/ ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
