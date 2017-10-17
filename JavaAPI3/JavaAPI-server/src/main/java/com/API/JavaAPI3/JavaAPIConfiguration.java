@@ -27,8 +27,27 @@ public class JavaAPIConfiguration extends Configuration {
         return defaultName;
     }
 
+    //test
+    /*
     @JsonProperty
     public void setDefaultName(String name) {
         this.defaultName = name;
-    }
+    }*/
+    /*
+	@Valid
+	@NotNull
+	@JsonProperty
+	private DataSourceFactory database = new DatabaseSourceFactory();
+	*/
+	/*
+	@JsonProperty("database")
+	public void setDataSourceFactory(DataSourceFactory factory) {
+		this.database = factory;
+	}
+	
+	*//*
+	
+	public DataSourceFactory getDataSourceFactory() {
+		return database;
+	}*/
 }

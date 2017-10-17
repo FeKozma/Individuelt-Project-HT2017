@@ -7,6 +7,8 @@ buildscript {
     dependencies {
         classpath "commons-codec:commons-codec:$commonsCodecVersion"
         classpath "com.palantir:gradle-flexversion:$flexVersion"
+        compile: 'org.jooby:jooby-jackson:1.1.3'
+        compile: 'org.mariadb.jdbc.Driver' //./JavaAPI-server/src/main/java/com/mariadb/jdbc/mariadb-java-client-2.1.2.jar')
     }
 }
 
@@ -23,6 +25,13 @@ apply plugin: 'idea'
 repositories {
     mavenCentral()
 }
+
+// ==========
+// start the mariadb server
+// ==========
+//run {
+// 	args 'server', './JavaAPI-server/src/dist/config/mariaDB.yml'
+//}
 
 // ==========
 // Versioning

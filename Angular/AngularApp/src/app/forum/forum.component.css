@@ -1,5 +1,29 @@
+agm-map {
+padding-top: 0px;
+margin: 0 auto;
+
+  height: 300px;
+  background-color: lightgrey;
+  border-style: ridge;
+  border-color: lightgrey;
+  content: no-close-quote;
+  text-align: center;
+}
+
 p {
   border-left: 6px solid red;
     background-color: lightgrey;
     padding-left: 20px;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 9px solid #42A948; /*red*/
+}
+.ng-invalid:not(form) {
+  border-left: 9px solid #a94442; /*green*/
+}
+
+h1 {
+  font-size: 13px;
+  padding-left: 50px;
 }

@@ -10,7 +10,7 @@ apply plugin: 'java'
 dependencies {
     compile "io.dropwizard:dropwizard-core:$dropwizardVersion"
     compile "io.dropwizard:dropwizard-jdbi:$dropwizardVersion"
-    compile "org.postgresql:postgresql:$postgresqlVersion"
+    // compile "org.postgresql:postgresql:$postgresqlVersion"
     compile "commons-codec:commons-codec:$commonsCodecVersion"
     compile "io.dropwizard-bundles:dropwizard-configurable-assets-bundle:$dropwizardConfigurableAssetsBundleVersion"
 
