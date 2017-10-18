@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddAdComponent } from './add-ad.component';
+import { ApproveAppComponent } from './approveApp.component';
 
-describe('AddAdComponent', () => {
-  let component: AddAdComponent;
-  let fixture: ComponentFixture<AddAdComponent>;
+describe('ApproveComponent', () => {
+  let component: ApproveAppComponent;
+  let fixture: ComponentFixture<ApproveComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddAdComponent ]
+      declarations: [ ApproveAppComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddAdComponent);
+    fixture = TestBed.createComponent(ApproveAppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

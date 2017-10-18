@@ -7,7 +7,15 @@ export class Data {
     public nrViews: number,
     public lng: number,
     public lat: number,
-    public meterRadius: number
+    public meterRadius: number,
+    public oneTimeView: number
   ) {}
 
+}
+
+export class appAndCompany {
+  constructor(
+    public app: string,
+    public company: string
+  ) {}
 }

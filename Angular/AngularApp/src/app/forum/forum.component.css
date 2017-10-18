@@ -27,3 +27,8 @@ h1 {
   font-size: 13px;
   padding-left: 50px;
 }
+.checkbox {
+  padding-left: 10px;
+  min-width: 20px;
+  min-height: 20px;
+}

@@ -1,7 +1,54 @@
 h1 {
   background-color: lightgrey;
-  border-style: ridge;
   content: no-close-quote;
   text-align: center;
 
+}
+
+#menu {
+  text-align: center;
+}
+#menuItem1 {
+  margin:auto;
+  display:block;
+  border-style: ridge;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  display:inline-block;
+
+}
+
+#menuItem2 {
+  margin:auto;
+  display:block;
+  border-style: ridge;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  display:inline-block;
+
+}
+
+#menuItem3 {
+  margin:auto;
+  display:block;
+  border-style: ridge;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  display:inline-block;
+
+
+}
+#menuItem3:hover{
+  background: grey;
+}
+
+#menuItem2:hover{
+  background: grey;
+}
+
+#menuItem1:hover{
+  background: grey;
 }

@@ -4,16 +4,35 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
+
 import { AgmCoreModule } from '@agm/core';
 import { ForumComponent } from './forum/forum.component';
 /** import { AddAdComponent } from './add-ad/addAdImport'; */
 
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { ApproveAppComponent } from './approveApp/approveApp.component';
+import { ApproveCompanyComponent } from './approve-company/approve-company.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
+    RouterModule.forRoot([
+      {
+        path: 'approve-app',
+        component: ApproveAppComponent
+      },
+      {
+        path: '',
+        component: ForumComponent
+      },
+      {
+        path: 'approve-company',
+        component: ApproveCompanyComponent
+      }
+    ]),
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -23,7 +42,7 @@ import { HttpModule } from '@angular/http';
     })
   ],
   providers: [],
-  declarations: [ AppComponent, ForumComponent/**, AddAdComponent*/ ],
+  declarations: [ AppComponent, ForumComponent, ApproveAppComponent, ApproveCompanyComponent/**, AddAdComponent*/ ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

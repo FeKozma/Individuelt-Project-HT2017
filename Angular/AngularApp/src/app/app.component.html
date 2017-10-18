@@ -2,8 +2,17 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
+<div id="menu">
+<button id="menuItem1" routerLink="/approve-app">godkänn appar</button>
+<button id="menuItem2" routerLink="/">hem</button>
+<button id="menuItem3" routerLink="/approve-company"> godkän företag</button>
+</div>
+<br>
 
 
+<router-outlet></router-outlet>
+<!--
+<app-approve></app-approve><br>
 <app-forum></app-forum>
 <!--
  <div class="container">

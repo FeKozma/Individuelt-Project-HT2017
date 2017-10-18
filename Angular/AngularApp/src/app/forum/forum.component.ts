@@ -15,8 +15,8 @@ import { Http, Response } from '@angular/http';
 })
 export class ForumComponent implements OnInit {
 
-success: string;
-id: any;
+//success: string;
+// id: any;
 
 getRadius($event){
    console.log($event);
@@ -72,14 +72,7 @@ getContacts() {
 
   });
 }
-getContacts2() {
-  this.getData().subscribe(data => {
-      console.log(data);
 
-      this.arr = JSON.parse(JSON.stringify(data));
-
-  });
-}
 
 data: any = {};
 
@@ -88,16 +81,13 @@ data: any = {};
   public lat: number = 56.16156;
   public lng: number = 15.58661;
   public radius: number = 300;
-  arr: any;
-  model = new Data(1, '', '', 'http://', 0, 0, 0, 0);
+  model = new Data(1, '', '', 'http://', 0, 0, 0, 0, 0);
 
   constructor(private http: Http,
     private mapsAPILoader: MapsAPILoader,
       private ngZone: NgZone)
       {
-        console.log('contacting api');
-        this.apiUrl = "getapps";
-        this.getContacts2();
+
       }
 
 
@@ -144,6 +134,16 @@ public searchElementRef: ElementRef;
         this.lng = position.coords.longitude;
         //this.zoom = 12;
       });
+    }
+  }
+
+  checkbox() {
+    if (this.model.oneTimeView == 0)
+    {
+      this.model.oneTimeView = 1;
+    }
+    else{
+      this.model.oneTimeView = 0;
     }
   }
 }
