@@ -32,7 +32,7 @@ export class ApproveAppComponent implements OnInit {
   getSubmit() {
 
     console.log('contacting api');
-    this.apiUrl = "addapp/" + this.model.app + "/" + this.model.company;
+    this.apiUrl = "addcompany/" + this.model.app + "/" + this.model.company;
     this.sendData();
 
 

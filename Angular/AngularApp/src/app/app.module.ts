@@ -14,6 +14,8 @@ import { RouterModule } from '@angular/router';
 
 import { ApproveAppComponent } from './approveApp/approveApp.component';
 import { ApproveCompanyComponent } from './approve-company/approve-company.component';
+import { StatisticComponent } from './statistic/statistic.component';
+
 
 @NgModule({
   imports: [
@@ -31,6 +33,10 @@ import { ApproveCompanyComponent } from './approve-company/approve-company.compo
       {
         path: 'approve-company',
         component: ApproveCompanyComponent
+      },
+      {
+        path: 'app-statistic',
+        component: StatisticComponent
       }
     ]),
     CommonModule,
@@ -42,7 +48,7 @@ import { ApproveCompanyComponent } from './approve-company/approve-company.compo
     })
   ],
   providers: [],
-  declarations: [ AppComponent, ForumComponent, ApproveAppComponent, ApproveCompanyComponent/**, AddAdComponent*/ ],
+  declarations: [ AppComponent, ForumComponent, ApproveAppComponent, ApproveCompanyComponent, StatisticComponent/**, AddAdComponent*/ ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

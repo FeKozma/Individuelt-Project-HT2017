@@ -19,3 +19,9 @@ export class appAndCompany {
     public company: string
   ) {}
 }
+
+export class companyName{
+  constructor(
+    public name: string
+  ) {}
+}
